@@ -28,8 +28,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - cmake
     - make  # [unix]
+    - autoconf
   host:
     - flex
   run:
