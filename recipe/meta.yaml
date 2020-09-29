@@ -18,16 +18,18 @@ source:
     - patches/20-bin-spelling
     - patches/25-fix-double-free
     - patches/30-manpage-spelling
+    # Patches from mac ports
+    - patches/fix-clang.patch
 
 build:
-  number: 0
-  skip: true  # [win or osx]
+  number: 1
+  skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - cmake
     - make  # [unix]
+    - autoconf
   host:
     - flex
   run:
