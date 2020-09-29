@@ -18,9 +18,11 @@ source:
     - patches/20-bin-spelling
     - patches/25-fix-double-free
     - patches/30-manpage-spelling
+    # Patches from mac ports
+    - patches/fix-clang.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
